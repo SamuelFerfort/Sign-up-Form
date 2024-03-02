@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "norse";
+    src: url("fonts/Norse-Bold.otf") format("opentype")
+
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+
+    display: flex;
+
+}
+
+.left {
+    height: 100vh;
+    background-size: cover;
+    background-image: url(background.jpg);
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    
+    
+   
+}
+.logoContainer {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 100px;
+    height: 250px;
+    width: 35vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 4rem;
+    color: white;
+    font-family: "norse";
+}
+
+footer {
+    color: white;
+    align-self: center;
+    margin-top: auto;
+    
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 75vw;
+    background-color: rgb(238,238,228);
+    justify-content: center;
+    padding-left: 50px;
+
+    
+}
+.right h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-size: 30px;
+    width: 55ch;
+    overflow-wrap: break-word;
+    margin-bottom: 30px;
+
+}
+.form-container {
+    
+
+}
