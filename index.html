@@ -21,39 +21,64 @@
                 <h1>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started</h1>
                 <h1>You know you want to.</h1>
             </header>
-            <div class="form-container">
-                <h1>Let's do this!</h1>
-                <form action="" method="get">
-                    <div class="form-row">
-                        <label for="name">FIRST NAME</label>
-                        <input type="text" >
-                    </div>
-                    <div class="form-row">
-                        <label for="name">FIRST NAME</label>
-                        <input type="text" >
-                    </div>
-                    <div class="form-row">
-                        <label for="name">FIRST NAME</label>
-                        <input type="text" >
-                    </div>
-                    <div class="form-row">
-                        <label for="name">FIRST NAME</label>
-                        <input type="text" >
-                    </div>
-                    <div class="form-row">
-                        <label for="name">FIRST NAME</label>
-                        <input type="text" >
-                    </div>
-                    <div class="form-row">
-                        <label for="name">FIRST NAME</label>
-                        <input type="text" >
-                    </div>
-                    
-                </form>
+            <div class="background">
+                <h2>Let's do this!</h2>
+                
+                    <form onsubmit="validatePasswords(event)" action="" method="get">
+                        <div class="form-row">
+                            <label for="name">FIRST NAME</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div class="form-row">
+                            <label for="lastName">LAST NAME</label>
+                            <input type="text" id="lastName">
+                        </div>
+                        <div class="form-row">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div class="form-row">
+                            <label for="telNumber">PHONE NUMBER</label>
+                            <input type="tel" id="telNumber">
+                        </div>
+                        <div class="form-row">
+                            <label for="password1">PASSWORD</label>
+                            <input type="password" id="password1">
+                        </div>
+                        <div class="form-row">
+                            <label for="password2">CONFIRM PASSWORD</label>
+                            <input type="password" id="password2" >
+                            <span id="passwordError" style="display: none; color: red;">Passwords do not match!</span>
+                        </div>
             </div>
+                <div class="submitBtn">
+                    <button type="submit">Create Account</button>
+                    <p>Already have an account? <span>Log In</span></p>
+                </div>
+                </form>
+            
+            
+        
         </div>
 
-   
-    
+        
+    <script>
+        
+        function validatePasswords(event) {
+            event.preventDefault();
+            const password1 = document.querySelector("#password1").value
+            const password2 = document.querySelector("#password2").value
+            
+            if (password1 !== password2) {
+                document.querySelector("#password1").classList.add("error");
+                document.querySelector("#password2").classList.add("error");
+                document.querySelector("#passwordError").style.display = "block";
+            } else {
+                document.querySelector("#password1").classList.remove("error");
+                document.querySelector("#password2").classList.remove("error");
+                document.querySelector("#passwordError").style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
