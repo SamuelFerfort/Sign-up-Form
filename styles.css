@@ -130,6 +130,7 @@ button {
 span {
     color: #596D48;
     font-weight: bold;
+    cursor: pointer;
 }
 p {
     
